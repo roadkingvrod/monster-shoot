@@ -9,11 +9,6 @@
     "lint": "eslint \"**/*.{jsx,ts,tsx}\" --fix",
     "test": "jest"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick --staged"
-    }
-  },
   "dependencies": {
     "express": "^4.17.1"
   },
