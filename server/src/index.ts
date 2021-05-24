@@ -1,6 +1,8 @@
-import { app } from './app';
+import app from './app';
 
 const port = 5000;
 
 // Start server
-app.listen(port, () => console.log(`Server is listening on port ${port}!`));
+app.listen(port, () => {
+  console.log(`Server is listening on port ${port}!`); // eslint-disable-line no-console
+});

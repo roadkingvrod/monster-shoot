@@ -1,5 +1,10 @@
-import { NextFunction, Request, Response, Router } from 'express';
-export const IndexController: Router = Router();
+import {
+  NextFunction, Request, Response, Router,
+} from 'express';
+
+const IndexController: Router = Router();
+
+export default IndexController;
 
 IndexController.get('/', async (req: Request, res: Response, next: NextFunction) => {
   try {
