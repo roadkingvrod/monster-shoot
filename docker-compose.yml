@@ -1,0 +1,34 @@
+version: "3.4"
+
+services:
+  server-test:
+    container_name: monster-shoot-server-test
+    build:
+      context: ./server
+      dockerfile: ../Dockerfile.server
+      target: test
+    volumes:
+      - ./server:/app
+    networks:
+      - monster-shoot-networks
+    environment:
+      NODE_ENV: development
+
+  server-dev:
+    container_name: monster-shoot-server-dev
+    build:
+      context: ./server
+      dockerfile: ../Dockerfile.server
+      target: development
+    ports:
+      - 5000:5000
+    volumes:
+      - ./server:/app
+    networks:
+      - monster-shoot-networks
+    environment:
+      NODE_ENV: development
+
+networks:
+  monster-shoot-networks:
+    driver: bridge
