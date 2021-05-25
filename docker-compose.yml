@@ -29,6 +29,24 @@ services:
     environment:
       NODE_ENV: development
 
+  client-test:
+    container_name: monster-shoot-client-test
+    build:
+      context: ./client
+      dockerfile: ../Dockerfile.client
+      target: test
+
+  client-dev:
+    container_name: monster-shoot-client-dev
+    build:
+      context: ./client
+      dockerfile: ../Dockerfile.client
+      target: development
+    volumes:
+      - ./client:/app
+    ports:
+      - 3000:3000
+
 networks:
   monster-shoot-networks:
     driver: bridge
