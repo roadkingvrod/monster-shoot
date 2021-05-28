@@ -2,8 +2,10 @@
 npm install --global yarn
 cd client
 yarn
-npm run jest
+yarn test
+yarn lint
 cd ..
 cd server
 yarn
-npm run jest
+yarn test
+yarn lint
