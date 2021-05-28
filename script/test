@@ -1,6 +1,6 @@
 #!/bin/sh
 cd client
-yarn jest
+npm run jest
 cd ..
 cd server
-yarn jest
+npm run jest
