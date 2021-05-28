@@ -1,0 +1,6 @@
+#!/bin/sh
+cd client
+yarn jest
+cd ..
+cd server
+yarn jest
