@@ -1,6 +1,9 @@
 #!/bin/sh
+npm install --global yarn
 cd client
+yarn
 npm run jest
 cd ..
 cd server
+yarn
 npm run jest
